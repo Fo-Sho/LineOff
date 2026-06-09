@@ -59,9 +59,32 @@ function HeroA() {
           to="/book"
           className="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-semibold inline-block mt-8"
         >
-           Book a Free Financial Efficiency Audit
+           Get a Free Hotel Financial Review
        </Link>
+      <p className="mt-3 text-sm text-white/50">
+         30-minute call • No commitment • Focused on hotel finance clarity
+     </p>
     </section>
+    <section className="px-8 py-16 text-center border-t border-white/10">
+  <h2 className="text-2xl font-bold mb-8">
+    Why Hospitality Finance Gets Messy
+  </h2>
+
+  <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto text-white/70">
+    <div className="bg-white/5 p-6 rounded-xl">
+      Multiple booking systems create fragmented revenue data
+    </div>
+
+    <div className="bg-white/5 p-6 rounded-xl">
+      Manual bookkeeping leads to delayed financial insights
+    </div>
+
+    <div className="bg-white/5 p-6 rounded-xl">
+      No clear visibility into true hotel profitability
+    </div>
+  </div>
+</section>
+    
   );
 }
 
@@ -125,6 +148,40 @@ function Services() {
   };
 
   return (
+     <section className="px-8 py-20 max-w-5xl mx-auto">
+  <h1 className="text-4xl font-bold mb-6">
+    Hospitality Accounting Services
+  </h1>
+
+  <p className="text-white/70 mb-10">
+    We help hotels and hospitality businesses gain financial clarity,
+    improve reporting accuracy, and streamline bookkeeping processes.
+  </p>
+
+  <div className="grid md:grid-cols-2 gap-6 mb-12">
+    <div className="bg-white/5 p-6 rounded-xl">
+      Monthly bookkeeping & reporting
+    </div>
+    <div className="bg-white/5 p-6 rounded-xl">
+      Hotel revenue tracking
+    </div>
+    <div className="bg-white/5 p-6 rounded-xl">
+      Expense categorization & control
+    </div>
+    <div className="bg-white/5 p-6 rounded-xl">
+      Profitability insights
+    </div>
+  </div>
+
+  <a
+    href="/book"
+    className="px-6 py-3 bg-emerald-500 text-black rounded font-semibold"
+  >
+    Book a Free Financial Review
+  </a>
+</section>
+
+    
     <section className="px-8 py-20 max-w-5xl mx-auto">
       <h1 className="text-4xl font-bold mb-6">Services</h1>
 
