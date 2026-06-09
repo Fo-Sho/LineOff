@@ -46,45 +46,60 @@ function Layout({ children }) {
 
 function HeroA() {
   return (
-    <section className="px-8 py-24 text-center relative overflow-hidden">
-      <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-emerald-500 via-blue-500 to-transparent blur-3xl" />
-      <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-5xl md:text-6xl font-bold relative">
-        Know Exactly Where Your <span className="text-emerald-400">Hotel's</span> Money Is Going 
-      </motion.h1>
-      <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="mt-6 text-lg text-white/70 max-w-2xl mx-auto">
-        Accurate bookkeeping, timely financial reporting, and actionable insights for hotels and hospitality businesses. Stop guessing,
-        start making confident financial decisions.
-      </motion.p>
+    <>
+      <section className="px-8 py-24 text-center relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-emerald-500 via-blue-500 to-transparent blur-3xl" />
+
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-5xl md:text-6xl font-bold relative"
+        >
+          Know Exactly Where Your <span className="text-emerald-400">Hotel's</span> Money Is Going
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="mt-6 text-lg text-white/70 max-w-2xl mx-auto"
+        >
+          Accurate bookkeeping, timely financial reporting, and actionable insights for hotels and hospitality businesses.
+          Stop guessing, start making confident financial decisions.
+        </motion.p>
+
         <Link
           to="/book"
           className="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-semibold inline-block mt-8"
         >
-           Get a Free Hotel Financial Review
-       </Link>
-      <p className="mt-3 text-sm text-white/50">
-         30-minute call • No commitment • Focused on hotel finance clarity
-      </p>
-    </section>
-    <section className="px-8 py-16 text-center border-t border-white/10">
-  <h2 className="text-2xl font-bold mb-8">
-    Why Hospitality Finance Gets Messy
-  </h2>
+          Get a Free Hotel Financial Review
+        </Link>
 
-  <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto text-white/70">
-    <div className="bg-white/5 p-6 rounded-xl">
-      Multiple booking systems create fragmented revenue data
-    </div>
+        <p className="mt-3 text-sm text-white/50">
+          30-minute call • No commitment • Focused on hotel finance clarity
+        </p>
+      </section>
 
-    <div className="bg-white/5 p-6 rounded-xl">
-      Manual bookkeeping leads to delayed financial insights
-    </div>
+      <section className="px-8 py-16 text-center border-t border-white/10">
+        <h2 className="text-2xl font-bold mb-8">
+          Why Hospitality Finance Gets Messy
+        </h2>
 
-    <div className="bg-white/5 p-6 rounded-xl">
-      No clear visibility into true hotel profitability
-    </div>
-  </div>
-</section>
-    
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto text-white/70">
+          <div className="bg-white/5 p-6 rounded-xl">
+            Multiple booking systems create fragmented revenue data
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-xl">
+            Manual bookkeeping leads to delayed financial insights
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-xl">
+            No clear visibility into true hotel profitability
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
 
