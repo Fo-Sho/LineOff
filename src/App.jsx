@@ -102,9 +102,85 @@ function About() {
   return <section className="px-8 py-20 max-w-4xl mx-auto"><h1 className="text-4xl font-bold mb-6">About LineOff</h1><p className="text-white/70">We simplify financial operations through automation and expert accounting workflows.</p></section>;
 }
 
+import { useState } from "react";
+
 function Services() {
-  return <section className="px-8 py-20 max-w-5xl mx-auto"><h1 className="text-4xl font-bold mb-10">Services</h1></section>;
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+
+    alert("Message sent. We'll get back to you soon.");
+  };
+
+  return (
+    <section className="px-8 py-20 max-w-5xl mx-auto">
+      <h1 className="text-4xl font-bold mb-6">Services</h1>
+
+      <p className="text-white/70 mb-10">
+        We help hotels and hospitality businesses improve bookkeeping,
+        financial reporting, and cash flow visibility.
+      </p>
+
+      {/* CONTACT FORM */}
+      <div className="bg-white/5 p-6 rounded-xl">
+        <h2 className="text-2xl font-semibold mb-4">
+          Contact LineOff
+        </h2>
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <input
+            type="text"
+            placeholder="Name"
+            className="w-full p-3 rounded bg-white/10"
+            onChange={(e) =>
+              setForm({ ...form, name: e.target.value })
+            }
+          />
+
+          <input
+            type="email"
+            placeholder="Email"
+            className="w-full p-3 rounded bg-white/10"
+            onChange={(e) =>
+              setForm({ ...form, email: e.target.value })
+            }
+          />
+
+          <textarea
+            placeholder="Tell us about your business"
+            className="w-full p-3 rounded bg-white/10"
+            rows="4"
+            onChange={(e) =>
+              setForm({ ...form, message: e.target.value })
+            }
+          />
+
+          <button
+            type="submit"
+            className="px-6 py-3 bg-emerald-500 text-black rounded font-semibold"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+  );
 }
+
+export default Services;
 
 function Blog() {
   return <section className="px-8 py-20 max-w-4xl mx-auto"><h1 className="text-4xl font-bold mb-10">Blog</h1></section>;
