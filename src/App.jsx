@@ -63,7 +63,7 @@ function HeroA() {
        </Link>
       <p className="mt-3 text-sm text-white/50">
          30-minute call • No commitment • Focused on hotel finance clarity
-     </p>
+      </p>
     </section>
     <section className="px-8 py-16 text-center border-t border-white/10">
   <h2 className="text-2xl font-bold mb-8">
