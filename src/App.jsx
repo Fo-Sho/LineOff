@@ -52,7 +52,8 @@ function HeroA() {
         Turn Financial Complexity <span className="text-emerald-400">Off</span>
       </motion.h1>
       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="mt-6 text-lg text-white/70 max-w-2xl mx-auto">
-        Automate accounting, reduce costs, and gain real-time financial clarity.
+        Accounting & Financial Clarity for Hotels and Hospitality Businesses.
+          Accurate bookkeeping, timely financial reporting, and actionable insights for hotels and hospitality businesses. Stop guessing, start making confident financial decisions.
       </motion.p>
         <Link
           to="/book"
