@@ -28,9 +28,12 @@ function Layout({ children }) {
           <Link to="/services" className="hover:text-white">Services</Link>
           <Link to="/blog" className="hover:text-white">Blog</Link>
         </nav>
-        <button className="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-semibold">
-          Book a Call
-        </button>
+        <a href="https://calendly.com/dlivtving"
+         target="_blank"
+         rel="noopener noreferrer"
+        className="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-semibold">
+        Book Free Audit
+       </a>
       </header>
       {children}
       <footer className="px-8 py-10 border-t border-white/10 text-center text-white/50 text-sm">
@@ -50,6 +53,13 @@ function HeroA() {
       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="mt-6 text-lg text-white/70 max-w-2xl mx-auto">
         Automate accounting, reduce costs, and gain real-time financial clarity.
       </motion.p>
+      <a href="https://calendly.com/dlivtving"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-semibold"
+      >
+       Book Free Audit
+     </a>
     </section>
   );
 }
