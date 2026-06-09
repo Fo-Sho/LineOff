@@ -16,13 +16,29 @@ export default async function handler(req, res) {
       to: "YOUR_EMAIL_HERE",
       subject: "New Hospitality Accounting Lead",
       html: `
-        <h2>New Lead from Website</h2>
-        <p><b>Name:</b> ${name}</p>
-        <p><b>Email:</b> ${email}</p>
-        <p><b>Message:</b> ${message}</p>
-      `,
+  <h2>New Qualified Lead</h2>
+
+  <p><b>Name:</b> ${name}</p>
+  <p><b>Email:</b> ${email}</p>
+  <p><b>Hotel:</b> ${hotelName}</p>
+  <p><b>Rooms:</b> ${rooms}</p>
+  <p><b>Revenue:</b> ${monthlyRevenue}</p>
+
+  <p><b>Message:</b> ${message}</p>
+`,
     });
 
+    let score = 0;
+
+if (rooms === "31-100") score += 2;
+if (rooms === "100+") score += 3;
+
+if (monthlyRevenue === "200k+") score += 3;
+if (monthlyRevenue === "50-200k") score += 2;
+
+if (score >= 5) {
+  console.log("🔥 HIGH VALUE LEAD");
+}
     // Auto-reply to client
     await resend.emails.send({
       from: "LineOff <onboarding@resend.dev>",
