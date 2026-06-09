@@ -143,10 +143,13 @@ function About() {
 
 function Services() {
   const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  name: "",
+  email: "",
+  hotelName: "",
+  rooms: "",
+  monthlyRevenue: "",
+  message: "",
+});
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -230,6 +233,40 @@ function Services() {
                 setForm({ ...form, email: e.target.value })
               }
             />
+
+            <input
+  type="text"
+  placeholder="Hotel / Business Name"
+  className="w-full p-3 rounded bg-white/10"
+  onChange={(e) =>
+    setForm({ ...form, hotelName: e.target.value })
+  }
+/>
+
+<select
+  className="w-full p-3 rounded bg-white/10"
+  onChange={(e) =>
+    setForm({ ...form, rooms: e.target.value })
+  }
+>
+  <option value="">Number of rooms</option>
+  <option value="1-10">1–10</option>
+  <option value="11-30">11–30</option>
+  <option value="31-100">31–100</option>
+  <option value="100+">100+</option>
+</select>
+
+<select
+  className="w-full p-3 rounded bg-white/10"
+  onChange={(e) =>
+    setForm({ ...form, monthlyRevenue: e.target.value })
+  }
+>
+  <option value="">Monthly revenue</option>
+  <option value="<50k">Less than €50k</option>
+  <option value="50-200k">€50k–€200k</option>
+  <option value="200k+">€200k+</option>
+</select>
 
             <textarea
               placeholder="Tell us about your business"
