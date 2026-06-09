@@ -49,11 +49,11 @@ function HeroA() {
     <section className="px-8 py-24 text-center relative overflow-hidden">
       <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-emerald-500 via-blue-500 to-transparent blur-3xl" />
       <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-5xl md:text-6xl font-bold relative">
-        Turn Financial Complexity <span className="text-emerald-400">Off</span>
+        Know Exactly Where Your <span className="text-emerald-400">Hotel's</span>Money Is Going 
       </motion.h1>
       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="mt-6 text-lg text-white/70 max-w-2xl mx-auto">
-        Accounting & Financial Clarity for Hotels and Hospitality Businesses.
-          Accurate bookkeeping, timely financial reporting, and actionable insights for hotels and hospitality businesses. Stop guessing, start making confident financial decisions.
+        Accurate bookkeeping, timely financial reporting, and actionable insights for hotels and hospitality businesses. Stop guessing,
+        start making confident financial decisions.
       </motion.p>
         <Link
           to="/book"
