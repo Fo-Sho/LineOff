@@ -141,15 +141,17 @@ function About() {
 }
 
 
+import { useState } from "react";
+
 function Services() {
   const [form, setForm] = useState({
-  name: "",
-  email: "",
-  hotelName: "",
-  rooms: "",
-  monthlyRevenue: "",
-  message: "",
-});
+    name: "",
+    email: "",
+    hotelName: "",
+    rooms: "",
+    monthlyRevenue: "",
+    message: "",
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -162,134 +164,123 @@ function Services() {
       body: JSON.stringify(form),
     });
 
-    alert("Message sent. We'll get back to you soon.");
+    alert("Thanks — we'll get back to you shortly.");
   };
 
   return (
-    <>
-      {/* SERVICES SECTION */}
-      <section className="px-8 py-20 max-w-5xl mx-auto">
-        <h1 className="text-4xl font-bold mb-6">
-          Hospitality Accounting Services
-        </h1>
+    <section className="px-8 py-20 max-w-5xl mx-auto">
 
-        <p className="text-white/70 mb-10">
-          We help hotels and hospitality businesses gain financial clarity,
-          improve reporting accuracy, and streamline bookkeeping processes.
-        </p>
+      {/* HEADER */}
+      <h1 className="text-4xl font-bold mb-4">
+        Hospitality Accounting Services
+      </h1>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <div className="bg-white/5 p-6 rounded-xl">
-            Monthly bookkeeping & reporting
-          </div>
-          <div className="bg-white/5 p-6 rounded-xl">
-            Hotel revenue tracking
-          </div>
-          <div className="bg-white/5 p-6 rounded-xl">
-            Expense categorization & control
-          </div>
-          <div className="bg-white/5 p-6 rounded-xl">
-            Profitability insights
-          </div>
-        </div>
+      <p className="text-white/70 mb-10 max-w-2xl">
+        We help hotels and hospitality businesses improve financial clarity,
+        streamline bookkeeping, and understand profitability in real time.
+      </p>
 
-        <a
-          href="/book"
-          className="px-6 py-3 bg-emerald-500 text-black rounded font-semibold"
-        >
-          Book a Free Financial Review
-        </a>
-      </section>
+      {/* VALUE BLOCK */}
+      <div className="grid md:grid-cols-2 gap-6 mb-12">
+        <div className="bg-white/5 p-6 rounded-xl">Monthly bookkeeping</div>
+        <div className="bg-white/5 p-6 rounded-xl">Revenue tracking</div>
+        <div className="bg-white/5 p-6 rounded-xl">Expense control</div>
+        <div className="bg-white/5 p-6 rounded-xl">Profit insights</div>
+      </div>
 
-      {/* CONTACT SECTION */}
-      <section className="px-8 py-20 max-w-5xl mx-auto">
-        <h1 className="text-4xl font-bold mb-6">Services</h1>
+      {/* CTA */}
+      <a
+        href="/book"
+        className="inline-block mb-12 px-6 py-3 bg-emerald-500 text-black rounded font-semibold"
+      >
+        Book a Free Financial Review
+      </a>
 
-        <p className="text-white/70 mb-10">
-          We help hotels and hospitality businesses improve bookkeeping,
-          financial reporting, and cash flow visibility.
-        </p>
+      {/* CONTACT FORM */}
+      <div className="bg-white/5 p-6 rounded-xl">
 
-        <div className="bg-white/5 p-6 rounded-xl">
-          <h2 className="text-2xl font-semibold mb-4">
-            Contact LineOff
-          </h2>
+        <h2 className="text-2xl font-semibold mb-6">
+          Or send us a message
+        </h2>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <input
-              type="text"
-              placeholder="Name"
-              className="w-full p-3 rounded bg-white/10"
-              onChange={(e) =>
-                setForm({ ...form, name: e.target.value })
-              }
-            />
+        <form onSubmit={handleSubmit} className="space-y-4">
 
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full p-3 rounded bg-white/10"
-              onChange={(e) =>
-                setForm({ ...form, email: e.target.value })
-              }
-            />
+          <input
+            type="text"
+            placeholder="Name"
+            className="w-full p-3 rounded bg-white/10"
+            onChange={(e) =>
+              setForm({ ...form, name: e.target.value })
+            }
+          />
 
-            <input
-  type="text"
-  placeholder="Hotel / Business Name"
-  className="w-full p-3 rounded bg-white/10"
-  onChange={(e) =>
-    setForm({ ...form, hotelName: e.target.value })
-  }
-/>
+          <input
+            type="email"
+            placeholder="Email"
+            className="w-full p-3 rounded bg-white/10"
+            onChange={(e) =>
+              setForm({ ...form, email: e.target.value })
+            }
+          />
 
-<select
-  className="w-full p-3 rounded bg-white/10"
-  onChange={(e) =>
-    setForm({ ...form, rooms: e.target.value })
-  }
->
-  <option value="">Number of rooms</option>
-  <option value="1-10">1–10</option>
-  <option value="11-30">11–30</option>
-  <option value="31-100">31–100</option>
-  <option value="100+">100+</option>
-</select>
+          <input
+            type="text"
+            placeholder="Hotel name"
+            className="w-full p-3 rounded bg-white/10"
+            onChange={(e) =>
+              setForm({ ...form, hotelName: e.target.value })
+            }
+          />
 
-<select
-  className="w-full p-3 rounded bg-white/10"
-  onChange={(e) =>
-    setForm({ ...form, monthlyRevenue: e.target.value })
-  }
->
-  <option value="">Monthly revenue</option>
-  <option value="<50k">Less than €50k</option>
-  <option value="50-200k">€50k–€200k</option>
-  <option value="200k+">€200k+</option>
-</select>
+          <select
+            className="w-full p-3 rounded bg-white/10"
+            onChange={(e) =>
+              setForm({ ...form, rooms: e.target.value })
+            }
+          >
+            <option value="">Number of rooms</option>
+            <option value="1-10">1–10</option>
+            <option value="11-30">11–30</option>
+            <option value="31-100">31–100</option>
+            <option value="100+">100+</option>
+          </select>
 
-            <textarea
-              placeholder="Tell us about your business"
-              className="w-full p-3 rounded bg-white/10"
-              rows="4"
-              onChange={(e) =>
-                setForm({ ...form, message: e.target.value })
-              }
-            />
+          <select
+            className="w-full p-3 rounded bg-white/10"
+            onChange={(e) =>
+              setForm({ ...form, monthlyRevenue: e.target.value })
+            }
+          >
+            <option value="">Monthly revenue</option>
+            <option value="<50k">Under €50k</option>
+            <option value="50-200k">€50k–€200k</option>
+            <option value="200k+">€200k+</option>
+          </select>
 
-            <button
-              type="submit"
-              className="px-6 py-3 bg-emerald-500 text-black rounded font-semibold"
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
-      </section>
-    </>
+          <textarea
+            placeholder="Tell us about your business"
+            className="w-full p-3 rounded bg-white/10"
+            rows="4"
+            onChange={(e) =>
+              setForm({ ...form, message: e.target.value })
+            }
+          />
+
+          <button
+            type="submit"
+            className="px-6 py-3 bg-emerald-500 text-black rounded font-semibold"
+          >
+            Send Message
+          </button>
+
+        </form>
+      </div>
+
+    </section>
   );
 }
 
+export default Services;
 function Blog() {
   return <section className="px-8 py-20 max-w-4xl mx-auto"><h1 className="text-4xl font-bold mb-10">Blog</h1></section>;
 }
