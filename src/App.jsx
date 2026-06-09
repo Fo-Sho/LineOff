@@ -141,8 +141,6 @@ function About() {
 }
 
 
-import { useState } from "react";
-
 function Services() {
   const [form, setForm] = useState({
     name: "",
@@ -280,7 +278,6 @@ function Services() {
   );
 }
 
-export default Services;
 function Blog() {
   return <section className="px-8 py-20 max-w-4xl mx-auto"><h1 className="text-4xl font-bold mb-10">Blog</h1></section>;
 }
