@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import Book from "./pages/Book";
 
 function useABVariant() {
@@ -102,7 +102,6 @@ function About() {
   return <section className="px-8 py-20 max-w-4xl mx-auto"><h1 className="text-4xl font-bold mb-6">About LineOff</h1><p className="text-white/70">We simplify financial operations through automation and expert accounting workflows.</p></section>;
 }
 
-import { useState } from "react";
 
 function Services() {
   const [form, setForm] = useState({
@@ -180,7 +179,6 @@ function Services() {
   );
 }
 
-export default Services;
 
 function Blog() {
   return <section className="px-8 py-20 max-w-4xl mx-auto"><h1 className="text-4xl font-bold mb-10">Blog</h1></section>;
