@@ -131,6 +131,22 @@ function Home() {
             <div className="p-4 bg-white/5 rounded-xl">Cash Flow & Profitability Insights</div>
           </div>
         </section>
+        <section className="px-8 py-16 text-center border-t border-white/10">
+  <h2 className="text-2xl font-bold mb-4">
+    Ready to Understand Your Hotel’s Finances?
+  </h2>
+
+  <p className="text-white/70 mb-6">
+    Book a free financial review and identify where your revenue is leaking.
+  </p>
+
+  <Link
+    to="/book"
+    className="inline-block px-6 py-3 bg-emerald-500 text-black rounded font-semibold"
+  >
+    Book Your Free Review
+  </Link>
+</section>
       </motion.div>
     </AnimatePresence>
   );
