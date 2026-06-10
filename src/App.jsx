@@ -139,7 +139,36 @@ function Home() {
   <p className="text-white/70 mb-6">
     Book a free financial review and identify where your revenue is leaking.
   </p>
+          
+   <section className="px-8 py-16 border-t border-white/10">
+  <h2 className="text-3xl font-bold text-center mb-10">
+    Who We Help
+  </h2>
 
+  <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+    <div className="bg-white/5 p-6 rounded-xl">
+      <h3 className="font-semibold mb-2">Hotels</h3>
+      <p className="text-white/70">
+        Financial reporting and bookkeeping support for growing hotel operations.
+      </p>
+    </div>
+
+    <div className="bg-white/5 p-6 rounded-xl">
+      <h3 className="font-semibold mb-2">Boutique Hotels</h3>
+      <p className="text-white/70">
+        Better visibility into revenue, costs, and profitability.
+      </p>
+    </div>
+
+    <div className="bg-white/5 p-6 rounded-xl">
+      <h3 className="font-semibold mb-2">Guesthouses</h3>
+      <p className="text-white/70">
+        Clear financial processes that support sustainable growth.
+      </p>
+    </div>
+  </div>
+</section>
+        
   <Link
     to="/book"
     className="inline-block px-6 py-3 bg-emerald-500 text-black rounded font-semibold"
@@ -153,7 +182,30 @@ function Home() {
 }
 
 function About() {
-  return <section className="px-8 py-20 max-w-4xl mx-auto"><h1 className="text-4xl font-bold mb-6">About LineOff</h1><p className="text-white/70">We simplify financial operations through automation and expert accounting workflows.</p></section>;
+  return (
+    <section className="px-8 py-20 max-w-4xl mx-auto">
+      <h1 className="text-4xl font-bold mb-6">About LineOff</h1>
+
+      <p className="text-white/70 mb-8">
+        LineOff helps hospitality businesses gain financial clarity through
+        accurate bookkeeping, timely reporting, and practical financial insights.
+      </p>
+
+      <div className="bg-white/5 p-6 rounded-xl">
+        <h2 className="text-2xl font-semibold mb-4">
+          Meet the Founder
+        </h2>
+
+        <p className="text-white/70">
+          I founded LineOff to help hotel and hospitality operators better
+          understand their numbers and make more confident financial decisions.
+          My focus is on simplifying accounting processes, improving reporting,
+          and providing the financial visibility needed to run a profitable
+          hospitality business.
+        </p>
+      </div>
+    </section>
+  );
 }
 
 
