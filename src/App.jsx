@@ -3,6 +3,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useMemo, useState } from "react";
 import Book from "./pages/Book";
 
+
+function trackBookingClick(location) {
+  if (window.gtag) {
+    window.gtag("event", "book_audit_click", {
+      page_location: location,
+    });
+  }
+}
+
 function useABVariant() {
   const location = useLocation();
   return useMemo(() => {
@@ -70,7 +79,8 @@ function HeroA() {
 
         <Link
           to="/book"
-          className="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-semibold inline-block mt-8"
+          onClick={() => trackBookingClick("homepage_hero")}
+          className="inline-block px-6 py-3 bg-emerald-500 text-black rounded-xl font-semibold"
         >
           Get a Free Hotel Financial Review
         </Link>
