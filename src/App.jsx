@@ -167,6 +167,8 @@ function Services() {
     message: "",
   });
 
+  const [submitted, setSubmitted] = useState(false);
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -178,7 +180,7 @@ function Services() {
       body: JSON.stringify(form),
     });
 
-    alert("Thanks — we'll get back to you shortly.");
+    setSubmitted(true);
   };
 
   return (
@@ -216,7 +218,13 @@ function Services() {
         <h2 className="text-2xl font-semibold mb-6">
           Or send us a message
         </h2>
-
+        
+         {submitted && (
+         <div className="bg-emerald-500/20 border border-emerald-500 p-4 rounded-xl mb-6">
+           Thank you. We've received your message and will get back to you shortly.
+         </div>
+          )}
+        
         <form onSubmit={handleSubmit} className="space-y-4">
 
           <input
