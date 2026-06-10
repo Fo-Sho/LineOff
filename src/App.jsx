@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMemo, useState } from "react";
-import Book from "./pages/Book";
-
+import Book from "./pages/Book.jsx";
+import Blog from "./pages/Blog.jsx";
+import HotelProfitability from "./pages/HotelProfitability.jsx";
 
 function trackBookingClick(location) {
   if (window.gtag) {
@@ -371,10 +372,6 @@ function Services() {
   );
 }
 
-function Blog() {
-  return <section className="px-8 py-20 max-w-4xl mx-auto"><h1 className="text-4xl font-bold mb-10">Blog</h1></section>;
-}
-
 export default function App() {
   return (
     <Router>
@@ -385,6 +382,7 @@ export default function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/book" element={<Book />} />
+          <Route path="/blog/hotel-profitability" element={<HotelProfitability />} />
         </Routes>
       </Layout>
     </Router>
