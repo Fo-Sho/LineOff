@@ -232,18 +232,25 @@ function Services() {
   const [submitted, setSubmitted] = useState(false);
   
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(form),
+  await fetch("/api/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(form),
+  });
+
+  // Track successful form submission
+  if (window.gtag) {
+    window.gtag("event", "contact_form_submit", {
+      business_type: "hospitality",
     });
+  }
 
-    setSubmitted(true);
-  };
+  setSubmitted(true);
+};
 
   return (
     <section className="px-8 py-20 max-w-5xl mx-auto">
