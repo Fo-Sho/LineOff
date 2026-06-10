@@ -1,4 +1,11 @@
+import { useEffect } from "react";
+
 export default function Book() {
+  useEffect(() => {
+  if (window.gtag) {
+    window.gtag("event", "book_page_view");
+  }
+}, []);
   return (
     <section className="min-h-screen bg-black text-white px-6 py-20">
       <div className="max-w-5xl mx-auto">
