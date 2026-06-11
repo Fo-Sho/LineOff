@@ -48,6 +48,13 @@ function Layout({ children }) {
       </header>
       {children}
       <footer className="px-8 py-10 border-t border-white/10 text-center text-white/50 text-sm">
+        <a
+           href="YOUR_LINKEDIN_COMPANY_URL"
+           target="_blank"
+           rel="noopener noreferrer"
+           className="text-emerald-400">
+          Follow LineOff on LinkedIn
+         </a>  
         © {new Date().getFullYear()} LineOff. All rights reserved.
       </footer>
     </div>
